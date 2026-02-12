@@ -194,7 +194,7 @@ function AnimatedText() {
   const heartCurve = useMemo(() => {
     const curve = new THREE.CurvePath<THREE.Vector3>()
     const scale = 2.5
-    const x = 0, y = 0, z = 10
+    const x = 5, y = 0, z = 10
 
     // Create curves that follow the heart outline
     const curve1 = new THREE.CubicBezierCurve3(
@@ -294,61 +294,11 @@ export default function App() {
         <directionalLight position={[-50, 10, 5]} intensity={0.8} />
         <AnimatedText />
         <CuteCat />
-        <Text position={[15, 0, 0]} fontSize={2} color={"#ff1744"}>
+        <Text position={[29, 0, 0]} fontSize={2} color={"#ff1744"}>
           Happy Valentine's Day!
         </Text>
       </Canvas>
       <div className='background'>
-        <div className='sun'>
-          <div className='rays-container'>
-            <div className='ray1'></div>
-            <div className='ray2'></div>
-            <div className='ray3'></div>
-            <div className='ray4'></div>
-          </div>
-
-        </div>
-
-        {/* Cloud Shape 1 - Classic three bumps */}
-        <div className='cloud cloud1'>
-          <div className='cloud-part part1'></div>
-          <div className='cloud-part part2'></div>
-          <div className='cloud-part part3'></div>
-        </div>
-
-        {/* Cloud Shape 2 - Elongated with four bumps */}
-        <div className='cloud cloud2'>
-          <div className='cloud-part part1'></div>
-          <div className='cloud-part part2'></div>
-          <div className='cloud-part part3'></div>
-          <div className='cloud-part part4'></div>
-        </div>
-
-        {/* Cloud Shape 3 - Rounded fluffy */}
-        <div className='cloud cloud3'>
-          <div className='cloud-part part1'></div>
-          <div className='cloud-part part2'></div>
-          <div className='cloud-part part3'></div>
-          <div className='cloud-part part4'></div>
-          <div className='cloud-part part5'></div>
-        </div>
-
-        {/* Cloud Shape 4 - Small simple */}
-        <div className='cloud cloud4'>
-          <div className='cloud-part part1'></div>
-          <div className='cloud-part part2'></div>
-        </div>
-
-        {/* Cloud Shape 5 - Wide flat */}
-        <div className='cloud cloud5'>
-          <div className='cloud-part part1'></div>
-          <div className='cloud-part part2'></div>
-          <div className='cloud-part part3'></div>
-          <div className='cloud-part part4'></div>
-        </div>
-
-        <div className='sky'></div>
-        <div className='grass'></div>
       </div>
     </div>
   )
