@@ -31,7 +31,7 @@ function CuteCat() {
     return new THREE.ExtrudeGeometry(shape, extrudeSettings)
   }, [])
 
-  useFrame((state, delta) => {
+  useFrame((state) => {
     setTime(state.clock.getElapsedTime())
 
     // Bounce animation
