@@ -282,19 +282,75 @@ function AnimatedText() {
 
 export default function App() {
   return (
-    <Canvas
-      camera={{ position: [0, 0, 90], fov: 50 }}
-    >
-      <ambientLight intensity={0.7} />
-      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} />
-      <directionalLight position={[-50, 10, 5]} intensity={0.8} />
-      <AnimatedText />
-      <CuteCat />
-      <Text position={[15, 0, 0]} fontSize={2} color={"#ff1744"}>
-        Happy Valentine's Day!
-      </Text>
-    </Canvas>
+    <div className='container'>
+
+      <Canvas
+        className='canvas'
+        camera={{ position: [0, 0, 90], fov: 50 }}
+      >
+        <ambientLight intensity={0.7} />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} />
+        <directionalLight position={[-50, 10, 5]} intensity={0.8} />
+        <AnimatedText />
+        <CuteCat />
+        <Text position={[15, 0, 0]} fontSize={2} color={"#ff1744"}>
+          Happy Valentine's Day!
+        </Text>
+      </Canvas>
+      <div className='background'>
+        <div className='sun'>
+          <div className='rays-container'>
+            <div className='ray1'></div>
+            <div className='ray2'></div>
+            <div className='ray3'></div>
+            <div className='ray4'></div>
+          </div>
+
+        </div>
+
+        {/* Cloud Shape 1 - Classic three bumps */}
+        <div className='cloud cloud1'>
+          <div className='cloud-part part1'></div>
+          <div className='cloud-part part2'></div>
+          <div className='cloud-part part3'></div>
+        </div>
+
+        {/* Cloud Shape 2 - Elongated with four bumps */}
+        <div className='cloud cloud2'>
+          <div className='cloud-part part1'></div>
+          <div className='cloud-part part2'></div>
+          <div className='cloud-part part3'></div>
+          <div className='cloud-part part4'></div>
+        </div>
+
+        {/* Cloud Shape 3 - Rounded fluffy */}
+        <div className='cloud cloud3'>
+          <div className='cloud-part part1'></div>
+          <div className='cloud-part part2'></div>
+          <div className='cloud-part part3'></div>
+          <div className='cloud-part part4'></div>
+          <div className='cloud-part part5'></div>
+        </div>
+
+        {/* Cloud Shape 4 - Small simple */}
+        <div className='cloud cloud4'>
+          <div className='cloud-part part1'></div>
+          <div className='cloud-part part2'></div>
+        </div>
+
+        {/* Cloud Shape 5 - Wide flat */}
+        <div className='cloud cloud5'>
+          <div className='cloud-part part1'></div>
+          <div className='cloud-part part2'></div>
+          <div className='cloud-part part3'></div>
+          <div className='cloud-part part4'></div>
+        </div>
+
+        <div className='sky'></div>
+        <div className='grass'></div>
+      </div>
+    </div>
   )
 }
 

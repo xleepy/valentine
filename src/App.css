@@ -11,8 +11,279 @@ body {
 .canvas {
   width: 100%;
   height: 100svh;
+  inset: 0;
+  z-index: 10;
 }
 
 canvas {
+  inset: 0;
+  z-index: 10;
+}
+
+.container {
+  position: relative;
+  width: 100%;
   height: 100svh;
+}
+
+.background {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  inset: 0;
+  min-height: 100svh;
+}
+
+.background .sky {
+  flex: 1;
+  background: radial-gradient(circle at center, #c8e6ff, #8fb8d9);
+}
+
+.background .sun {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #ffe680, #ffd966);
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  opacity: 0.85;
+}
+
+.sun .rays-container {
+  position: relative;
+}
+
+.rays-container > * {
+  background: radial-gradient(circle at center, #ffe680, #ffd966);
+  position: absolute;
+  border-radius: 10px;
+}
+
+.rays-container .ray1 {
+  width: 114px;
+  height: 20px;
+  top: 0;
+  left: -99px;
+  transform: rotate(38deg);
+}
+
+.rays-container .ray2 {
+  width: 114px;
+  height: 20px;
+  background: radial-gradient(circle at center, #ffe680, #ffd966);
+  position: absolute;
+  left: -121px;
+  transform: rotate(-6deg);
+  border-radius: 10px;
+  bottom: -117px;
+}
+
+.rays-container .ray3 {
+  width: 114px;
+  height: 20px;
+  background: radial-gradient(circle at center, #ffe680, #ffd966);
+  position: absolute;
+  left: -93px;
+  transform: rotate(-38deg);
+  border-radius: 10px;
+  bottom: -211px;
+}
+
+.rays-container .ray4 {
+  width: 114px;
+  height: 20px;
+  position: absolute;
+  left: 9px;
+  transform: rotate(104deg);
+  bottom: -272px;
+}
+
+.background .cloud {
+  position: absolute;
+  display: flex;
+  opacity: 0.75;
+}
+
+.cloud .cloud-part {
+  background: radial-gradient(circle at center, #ffffff, #d4d4d4);
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Cloud Shape 1 - Classic three bumps */
+.cloud1 {
+  top: 15%;
+  left: 10%;
+  animation: float-cloud 40s linear infinite;
+}
+
+.cloud1 .part1 {
+  width: 100px;
+  height: 80px;
+  left: 0;
+  top: 10px;
+}
+
+.cloud1 .part2 {
+  width: 120px;
+  height: 100px;
+  left: 70px;
+  top: 0;
+}
+
+.cloud1 .part3 {
+  width: 90px;
+  height: 70px;
+  left: 150px;
+  top: 15px;
+}
+
+/* Cloud Shape 2 - Elongated with four bumps */
+.cloud2 {
+  top: 25%;
+  right: 15%;
+  animation: float-cloud 50s linear infinite reverse;
+}
+
+.cloud2 .part1 {
+  width: 80px;
+  height: 60px;
+  left: 0;
+  top: 20px;
+}
+
+.cloud2 .part2 {
+  width: 90px;
+  height: 70px;
+  left: 60px;
+  top: 10px;
+}
+
+.cloud2 .part3 {
+  width: 85px;
+  height: 65px;
+  left: 130px;
+  top: 15px;
+}
+
+.cloud2 .part4 {
+  width: 75px;
+  height: 60px;
+  left: 190px;
+  top: 20px;
+}
+
+/* Cloud Shape 3 - Rounded fluffy */
+.cloud3 {
+  top: 8%;
+  left: 40%;
+  animation: float-cloud 45s linear infinite;
+}
+
+.cloud3 .part1 {
+  width: 70px;
+  height: 70px;
+  left: 0;
+  top: 20px;
+}
+
+.cloud3 .part2 {
+  width: 90px;
+  height: 90px;
+  left: 50px;
+  top: 0;
+}
+
+.cloud3 .part3 {
+  width: 95px;
+  height: 95px;
+  left: 110px;
+  top: 5px;
+}
+
+.cloud3 .part4 {
+  width: 80px;
+  height: 80px;
+  left: 170px;
+  top: 10px;
+}
+
+.cloud3 .part5 {
+  width: 65px;
+  height: 65px;
+  left: 220px;
+  top: 25px;
+}
+
+/* Cloud Shape 4 - Small simple */
+.cloud4 {
+  top: 35%;
+  left: 5%;
+  animation: float-cloud 35s linear infinite;
+}
+
+.cloud4 .part1 {
+  width: 80px;
+  height: 60px;
+  left: 0;
+  top: 10px;
+}
+
+.cloud4 .part2 {
+  width: 100px;
+  height: 75px;
+  left: 50px;
+  top: 0;
+}
+
+/* Cloud Shape 5 - Wide flat */
+.cloud5 {
+  top: 40%;
+  right: 8%;
+  animation: float-cloud 55s linear infinite reverse;
+}
+
+.cloud5 .part1 {
+  width: 70px;
+  height: 50px;
+  left: 0;
+  top: 15px;
+}
+
+.cloud5 .part2 {
+  width: 110px;
+  height: 65px;
+  left: 50px;
+  top: 5px;
+}
+
+.cloud5 .part3 {
+  width: 100px;
+  height: 60px;
+  left: 130px;
+  top: 8px;
+}
+
+.cloud5 .part4 {
+  width: 80px;
+  height: 55px;
+  left: 200px;
+  top: 12px;
+}
+
+/* Animation for floating clouds */
+@keyframes float-cloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.background .grass {
+  flex: 1;
+  background: radial-gradient(circle at center, #b3e6b3, #7fbf7f);
 }
